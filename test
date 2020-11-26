@@ -1,0 +1,13 @@
+switch-add 443
+switch-add 410
+switch-add 656
+display
+switch-connect 443 410
+phone-add 656-112-3412
+phone-add 443-132-1332
+display
+start-call 656-112-3412 443-132-1332
+switch-connect 656 410
+start-call 656-112-3412 443-132-1332
+display
+network-save sample.txt
