@@ -100,7 +100,6 @@ def load_network(file_name):
         FILE=[]
         for line in f:
             FILE.append(line)
-        print(FILE)
         switchboards=int(FILE[0])
         for switchboard in range(1,switchboards+1):
             s=""
@@ -158,7 +157,7 @@ def start_call(start_area, start_number, end_area, end_number):
         print(start_area,"-",start_number," and ",end_area,"-",end_number," were not connected.")
     else:
         print(start_area,"-",start_number," and ",end_area,"-",end_number," are now connected.")
-        connected_phones[start_number]=[end_area,start_number]
+        connected_phones[start_number]=[end_area,end_number]
         connected_phones[end_number]=[start_area,start_number]
 
 
